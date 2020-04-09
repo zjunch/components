@@ -2,7 +2,8 @@
 
 
 总结处理方式：
-1.gradle.properties 添加  对应module 设置，  
+1.gradle.properties 添加  对应module 设置，
+
     isNeedFriendMoudle=true   //是否是app的引用module  ,true 则当作moudle应用，false 则作为单独的app
     
     isNeedMineMoudle=true    
