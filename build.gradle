@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.0'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+
+    configs = [
+            appId:"com.android.components",
+            mineId:"com.android.mine",
+            friendId:"com.android.friend",
+            homeId:"com.android.home",
+            discoverId:"com.android.discover",
+            compileSdkVersion: 28,
+            minSdkVersion :19,
+            targetSdkVersion: 28,
+            versionCode: 1,
+            versionName: "1.0.0",
+    ]
+}
