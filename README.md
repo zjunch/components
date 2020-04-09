@@ -4,9 +4,13 @@
 总结处理方式：
 1.gradle.properties 添加  对应module 设置，  
     isNeedFriendMoudle=true   //是否是app的引用module  ,true 则当作moudle应用，false 则作为单独的app
+    
     isNeedMineMoudle=true    
+    
     isNeedDiscoverMoudle=true
+    
     isNeedHomeMoudle=true
+    
     
 2.设置module 的 apply plugin，下面依HomeMoudle为例，其他module 依次调整
     if (isNeedHomeMoudle.toBoolean()) {
