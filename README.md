@@ -139,15 +139,26 @@
     }
     
     页面设置跳转
-    findViewById(R.id.tvApp).setOnClickListener(new View.OnClickListener() {
+    @Route(path = ZRouterConstants.MAIN_ACTIVITY)
+    
+    public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ARouter.getInstance().inject(this);
+        findViewById(R.id.tvApp).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 2. 跳转并携带参数
-                ARouter.getInstance().build(ZRouterConstants.HOME_MAIN_ACTIVITY)   //跳转到home 模块
+                //  跳转并携带参数
+                ARouter.getInstance().build(ZRouterConstants.HOME_MAIN_ACTIVITY)//跳转至home模块
                         .withString("key3", "test")
                         .navigation();
             }
         });
+    }
+}
     
 
    
